@@ -33,6 +33,6 @@ You can inspect the payload via
 ```json
 {
 	"name": "<USERNAME>",
-	"iat": '<INACTIVE_TIMESTAMP>'
+	"iat": <INACTIVE_TIMESTAMP>
 }
 ```

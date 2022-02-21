@@ -32,7 +32,7 @@ const authenticateJWT = (req, res, nxt) => {
     })
 }
 
-const fromNameToPath = (fName) => path.resolve(__dirname, `./data/${fName}`)
+const fromNameToPath = (fName) => path.resolve(__dirname, `../data/${fName}`)
 const gelJSonFromFile = async (fName) => {
   try {
       const data = await fsPromises.readFile(fromNameToPath(fName))

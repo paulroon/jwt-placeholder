@@ -9,6 +9,8 @@ const app = express()
 
 const jwt = require('jsonwebtoken')
 
+const FAIL_PASSWORD = "not_the_password"
+
 app.use(express.json())
 
 
@@ -63,7 +65,7 @@ app.get("/jwt/payload", authenticateJWT, (req, res) => {
 app.post("/login", (req, res) => {
     // Authenticate User (always do unless password is 'NOT_THE_PASSWORD')
     const password = req.body.password
-    if (password && password.toLowerCase() !== "not_the_password") {
+    if (password && password.toLowerCase() !== FAIL_PASSWORD) {
         
         const access_token = jwt.sign(
             { 

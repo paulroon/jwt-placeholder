@@ -9,8 +9,8 @@ const app = express()
 
 // Middleware
 app.use(express.json())
-app.use("/", resourceRoutes)
-app.use("/", authRoutes)
+app.use("/api", resourceRoutes)
+app.use("/api", authRoutes)
 
 const port = process.env.PORT || 3000
 app.listen(port, () =>
